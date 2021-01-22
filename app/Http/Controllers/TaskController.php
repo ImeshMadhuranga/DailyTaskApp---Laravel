@@ -21,7 +21,8 @@ class TaskController extends Controller
 
         $data=task::all();
 
-        return view('tasks')->with('tasks',$data);
+        // return view('tasks')->with('tasks',$data)
+        return redirect('tasks')->with('tasks',$data);
         
     }
 

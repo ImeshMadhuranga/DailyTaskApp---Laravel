@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Daily Task App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -63,7 +63,7 @@
                                     <a href="/markascompleted/{{$task->id}}" class="btn btn-primary">Marked as completed</a>
                                 @endif
 
-                                    <a href="/deletetask/{{$task->id}}"></a>
+                                    <a href="/deletetask/{{$task->id}}" class="btn btn-warning">Delete Task</a>
 
                                 </td>
                                 
