@@ -39,6 +39,7 @@
                                 <th scope="col">ID</th>
                                 <th scope="col">Task</th>
                                 <th scope="col">Completed</th>
+                                <th scope="col">Actions</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -50,15 +51,22 @@
                                 <td>{{$task->task}}</td>
                                 <td>
                                 @if($task->iscompleted)
-                                <button class="btn btn-success">Completed</button>
+                                    <button class="btn btn-success">Completed</button>
                                 @else
-                                <button class="btn btn-warning">Not Completed</button>
+                                    <button class="btn btn-warning">Not Completed</button>
+                                @endif
+                                </td>
+                                <td>
+                                @if($task->iscompleted)
+                                    <a href="/markasnotcompleted/{{$task->id}}" class="btn btn-danger">Marked as not completed</a>
+                                @else
+                                    <a href="/markascompleted/{{$task->id}}" class="btn btn-primary">Marked as completed</a>
                                 @endif
                                 </td>
                               </tr>
 
                             @endforeach
-
+                            
                             </tbody>
                           </table>
                     </div>

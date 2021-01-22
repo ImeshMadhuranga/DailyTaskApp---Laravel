@@ -22,3 +22,7 @@ $data=App\Task::all();
 });
 
 Route::post('/saveTask', 'TaskController@store');
+
+Route::get('/markascompleted/{id}', 'TaskController@UpdateTaskAsCompleted');
+
+Route::get('/markasnotcompleted/{id}', 'TaskController@UpdateTaskAsNotCompleted');
