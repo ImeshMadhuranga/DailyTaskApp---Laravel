@@ -62,7 +62,11 @@
                                 @else
                                     <a href="/markascompleted/{{$task->id}}" class="btn btn-primary">Marked as completed</a>
                                 @endif
+
+                                    <a href="/deletetask/{{$task->id}}"></a>
+
                                 </td>
+                                
                               </tr>
 
                             @endforeach
