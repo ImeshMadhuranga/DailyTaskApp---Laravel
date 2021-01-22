@@ -38,7 +38,7 @@
                               <tr>
                                 <th scope="col">ID</th>
                                 <th scope="col">Task</th>
-                                <th scope="col">Completed</th>
+                                <th scope="col">Status</th>
                                 <th scope="col">Actions</th>
                               </tr>
                             </thead>
@@ -51,19 +51,21 @@
                                 <td>{{$task->task}}</td>
                                 <td>
                                 @if($task->iscompleted)
-                                    <button class="btn btn-success">Completed</button>
+                                    <span class="badge badge-success">Completed</span>
                                 @else
-                                    <button class="btn btn-warning">Not Completed</button>
+                                    <span class="badge badge-danger">Not Completed</span>
                                 @endif
                                 </td>
                                 <td>
                                 @if($task->iscompleted)
                                     <a href="/markasnotcompleted/{{$task->id}}" class="btn btn-danger">Marked as not completed</a>
                                 @else
-                                    <a href="/markascompleted/{{$task->id}}" class="btn btn-primary">Marked as completed</a>
+                                    <a href="/markascompleted/{{$task->id}}" class="btn btn-success">Marked as completed</a>
                                 @endif
 
-                                    <a href="/deletetask/{{$task->id}}" class="btn btn-warning">Delete Task</a>
+                                    <a href="/updatetaskview/{{$task->id}}" class="btn btn-warning">Update</a>
+
+                                    <a href="/deletetask/{{$task->id}}" class="btn btn-primary">Delete</a>
 
                                 </td>
                                 
